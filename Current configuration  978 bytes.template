@@ -1,0 +1,7 @@
+Current configuration : 978 bytes
+upgrade fpd: auto
+version: 12.4
+service timestamps debug datetime: msec
+service timestamps log datetime: msec
+hostname: R2
+

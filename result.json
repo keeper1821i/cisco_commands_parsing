@@ -1,0 +1,117 @@
+{
+    "192.168.73.2": {
+        "show access-list": "",
+        "show interfaces": [
+            {
+                "abort": "",
+                "address": "ca01.3274.0000",
+                "bandwidth": "100000 Kbit",
+                "bia": "ca01.3274.0000",
+                "crc": "0",
+                "delay": "100 usec",
+                "description": "",
+                "duplex": "Half-duplex",
+                "encapsulation": "ARPA",
+                "frame": "0",
+                "giants": "",
+                "hardware_type": "DEC21140",
+                "input_errors": "0",
+                "input_packets": "",
+                "input_pps": "1",
+                "input_rate": "1000",
+                "interface": "FastEthernet0/0",
+                "ip_address": "192.168.73.2/24",
+                "last_input": "00:00:00",
+                "last_output": "00:00:00",
+                "last_output_hang": "never",
+                "link_status": "up",
+                "media_type": "",
+                "mtu": "1500",
+                "output_errors": "0",
+                "output_packets": "15513",
+                "output_pps": "1",
+                "output_rate": "1000",
+                "overrun": "0",
+                "protocol_status": "up",
+                "queue_strategy": "fifo",
+                "runts": "",
+                "speed": "100Mb/s",
+                "vlan_id": "",
+                "vlan_id_inner": "",
+                "vlan_id_outer": ""
+            },
+            {
+                "abort": "",
+                "address": "ca01.3274.001c",
+                "bandwidth": "100000 Kbit",
+                "bia": "ca01.3274.001c",
+                "crc": "0",
+                "delay": "100 usec",
+                "description": "",
+                "duplex": "Half-duplex",
+                "encapsulation": "ARPA",
+                "frame": "0",
+                "giants": "",
+                "hardware_type": "DEC21140",
+                "input_errors": "0",
+                "input_packets": "",
+                "input_pps": "0",
+                "input_rate": "0",
+                "interface": "FastEthernet1/0",
+                "ip_address": "192.168.20.1/24",
+                "last_input": "00:00:15",
+                "last_output": "00:00:05",
+                "last_output_hang": "never",
+                "link_status": "up",
+                "media_type": "",
+                "mtu": "1500",
+                "output_errors": "0",
+                "output_packets": "1600",
+                "output_pps": "0",
+                "output_rate": "0",
+                "overrun": "0",
+                "protocol_status": "up",
+                "queue_strategy": "fifo",
+                "runts": "",
+                "speed": "100Mb/s",
+                "vlan_id": "",
+                "vlan_id_inner": "",
+                "vlan_id_outer": ""
+            }
+        ],
+        "show running-config": "Building configuration...\n\nCurrent configuration : 1130 bytes\n!\nupgrade fpd auto\nversion 12.4\nservice timestamps debug datetime msec\nservice timestamps log datetime msec\nno service password-encryption\n!\nhostname R1\n!\nboot-start-marker\nboot-end-marker\n!\nlogging message-counter syslog\nenable secret 5 $1$MMv1$eP134fUMuEPszJ7lNtbqI/\n!\nno aaa new-model\nip source-route\nno ip icmp rate-limit unreachable\nip cef\n!\n!\n!\n!\nno ip domain lookup\nno ipv6 cef\n!\nmultilink bundle-name authenticated\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\narchive\n log config\n  hidekeys\n! \n!\n!\n!\n!\nip tcp synwait-time 5\n!\n!\n!\n!\ninterface FastEthernet0/0\n ip address 192.168.73.2 255.255.255.0\n duplex half\n!\ninterface FastEthernet1/0\n ip address 192.168.20.1 255.255.255.0\n duplex half\n!\nip forward-protocol nd\nno ip http server\nno ip http secure-server\n!\n!\n!\nno cdp log mismatch duplex\n!\n!\n!\n!\n!\n!\ncontrol-plane\n!\n!\n!\n!\n!\n!\n!\ngatekeeper\n shutdown\n!\n!\nline con 0\n exec-timeout 0 0\n privilege level 15\n logging synchronous\n stopbits 1\nline aux 0\n exec-timeout 0 0\n privilege level 15\n logging synchronous\n stopbits 1\nline vty 0 4\n password cisco\n login\n transport input telnet\nline vty 5\n login local\n transport input telnet\n!\nend\n",
+        "show startup-config": [
+            {
+                "desc": "",
+                "port": "",
+                "state": "shutdown"
+            }
+        ],
+        "show version": [
+            {
+                "config_register": "0x2102",
+                "hardware": [
+                    "7206VXR"
+                ],
+                "hostname": "R1",
+                "mac": [],
+                "release": "fc3",
+                "reload_reason": "unknown reload cause - suspect boot_data[BOOT_COUNT] 0x0, BOOT_COUNT 0, BOOTDATA 19",
+                "restarted": "",
+                "rommon": "ROMMON",
+                "running_image": "//255.255.255.255/unknown",
+                "serial": [
+                    "4279256517"
+                ],
+                "software_image": "C7200-ADVENTERPRISEK9-M",
+                "uptime": "3 hours, 44 minutes",
+                "uptime_days": "",
+                "uptime_hours": "3",
+                "uptime_minutes": "44",
+                "uptime_weeks": "",
+                "uptime_years": "",
+                "version": "12.4(24)T5"
+            }
+        ]
+    }
+}

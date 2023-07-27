@@ -1,0 +1,8 @@
+Value Cur_configuration (/S+)
+Value Size (\d+\s\D)
+
+Start
+ ^ +${Cur_configuration} + ${Current_configuration}
+
+
+

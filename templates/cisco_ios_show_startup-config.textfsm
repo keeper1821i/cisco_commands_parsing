@@ -1,0 +1,8 @@
+Value port (\d\/\d)
+Value state (shutdown|no shutdown)
+Value desc (\S+)
+
+Start
+  ^interface ethernet ${port} -> Continue.Record
+  ^.${state}
+  ^.name.${desc}
