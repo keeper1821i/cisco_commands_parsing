@@ -9,7 +9,7 @@ import pathlib
 from textfsm import TextFSMError
 
 dir_path = pathlib.Path.cwd()
-my_textfsm = pathlib.Path( 'templates', 'cisco_ios_show_running-config.textfsm')
+my_textfsm = pathlib.Path('templates', 'cisco_ios_show_running-config.textfsm')
 
 commands_list = ["show version",  "show startup-config", "show running-config", "show access-list", "show interfaces"]
 with open('routers.json', 'r') as read_file:
@@ -33,7 +33,7 @@ def send_show_command(device, commands):
                     res[i['host']][command] = output
 
         return res
-    except (NetmikoTimeoutException, NetmikoAuthenticationException) as error:
+    except (NetmikoTimeoutException, NetmikoAuthenticationException, TimeoutError) as error:
         print(error)
 
 
